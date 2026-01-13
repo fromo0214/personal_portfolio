@@ -177,9 +177,8 @@ section{
 }
 
 #fernando{
-  width: 400px;
-  height: 600px;
-  margin-bottom: 20px;
+  width: 425px;
+  height: 550px;
 }
 
 #linked-in{
@@ -210,118 +209,7 @@ section{
   padding: 20px;
 }
 
-.projects {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-  margin-top: 50px;
-}
 
-.project-item {
-  position: relative;
-  width: 300px;
-  height: 300px;
-  overflow: hidden;
-  cursor: pointer;
-  margin-bottom: 20px; /* Optional: adds space below each project item */
-}
-
-.project-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: 0.3s ease-in-out;
-}
-
-.overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.7); /* Darkens the image */
-  opacity: 0;
-  transition: 0.3s ease-in-out;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.text {
-  color: white;
-  font-size: 18px;
-  text-align: center;
-  padding: 10px;
-  font-family: 'Poppins', sans-serif;
-}
-
-.project-item:hover .project-img {
-  transform: scale(1.1); /* Slightly zooms in the image */
-}
-
-.project-item:hover .overlay {
-  opacity: 1; /* Makes the overlay visible */
-}
-
-/* Modal container */
-.modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  left: 0;
-  top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgba(0, 0, 0, 0.8); /* Black w/ opacity */
-  align-items: center;
-  justify-content: center;
-}
-
-/* Modal content box */
-.modal-content {
-  background-color: var(--bg-color);
-  margin: auto;
-  padding: 20px;
-  border-radius: 10px;
-  width: 80%;
-  max-width: 600px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  height: auto; /* Adjusts height based on content */
-}
-
-/* Close button */
-.close {
-  color: #aaa;
-  align-self: flex-end; /* Aligns the close button to the top-right */
-  font-size: 28px;
-  font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-  color: black;
-  text-decoration: none;
-  cursor: pointer;
-}
-
-.modal-content h2 {
-  margin-bottom: 20px;
-  font-family: 'Poppins', sans-serif;
-  font-size: 24px;
-}
-
-.modal-content p {
-  font-family: 'Poppins', sans-serif;
-  font-size: 18px;
-  line-height: 1.5;
-}
 
 .about {
   min-height: 100vh;
