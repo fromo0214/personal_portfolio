@@ -13,19 +13,25 @@
   --main-color: #0f3052;
 }
 
+html {
+  background: var(--bg-color);
+}
+
 body {
   min-height: 100vh;
-  background: var(--bg-color);
+  background: linear-gradient(180deg, #222327 0%, #1b1c20 100%);
   color: var(--text-color);
   margin: 0;
   padding-top: 70px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 header {
-  position: fixed;
+  background: rgba(34, 35, 39, 0.85); /* same as bg, slightly transparent */
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+    box-shadow:
+    0 8px 20px rgba(0, 0, 0, 0.25),
+    0 20px 40px rgba(0, 0, 0, 0.15);  position: fixed;
   width: 100%;
   top: 0;
   right: 0;
@@ -34,7 +40,7 @@ header {
   align-items: center;
   justify-content: space-between;
   background: var(--bg-color);
-  padding: 19px 12%;
+  padding: 12px 12%;
   transition: all 0.50s ease;
 }
 
@@ -139,15 +145,15 @@ header {
 }
 
 p{
-  line-height: 1.6;
+  line-height: 1.75;
   color: var(--text-color);
-  max-width: 80%;
-  text-align: center;
-  padding: 5px;
-  border-radius: 8px;
-  background-color: rgba(15, 48, 82, 0.1000);
-
+  max-width: 70ch;
+  text-align: left;
+  padding: 0;
+  background: none;
 }
+
+
 #content{
   margin-top: 50px;
   margin-bottom: 20px;
@@ -315,4 +321,49 @@ section{
   font-family: 'Poppins', sans-serif;
   font-size: 18px;
   line-height: 1.5;
+}
+
+.about {
+  min-height: 100vh;
+  padding: 16px 1.5rem 80px;
+  display: flex;
+  justify-content: center;
+}
+
+.about-card {
+  width: 100%;
+  max-width: 880px;
+  padding: 3.5rem 3rem;
+  background: rgba(15, 48, 82, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(8px);
+  border-radius: 28px;
+}
+
+/* Section spacing */
+.about-card section {
+  margin-bottom: 3rem;
+}
+
+/* Headings */
+.about-card h1 {
+  font-size: 2.6rem;
+}
+
+.about-card h2 {
+  font-size: 1.6rem;
+  margin-top: 2.5rem;
+}
+
+
+/* Text */
+.about-card p {
+  color: #cbd5e1;
+  max-width: 70ch;
+}
+
+/* Optional subtle divider */
+.about-card section:not(:last-child) {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  padding-bottom: 2.5rem;
 }

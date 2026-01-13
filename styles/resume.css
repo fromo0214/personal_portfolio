@@ -13,11 +13,30 @@
   --main-color: #0f3052;
 }
 
+html{
+  background: var(--bg-color);
+}
+
 body {
   min-height: 100vh;
-  background: var(--bg-color);
+  background: linear-gradient(180deg, #222327 0%, #1b1c20 100%);
+  background-color: var(--bg-color);
   color: var(--text-color);
   margin: 0;
+  padding-top: 120px; /* room for fixed header + logo */
+
+  /* Stack resume + copyright vertically */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+/* Give the PDF some breathing room under the navbar */
+object{
+  width: 75%;
+  height: 800px;
+  margin-top: 18px;
 }
 
 header {
@@ -29,8 +48,15 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: var(--bg-color);
-  padding: 28px 12%;
+
+  background: rgba(34, 35, 39, 0.85);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  box-shadow:
+    0 8px 20px rgba(0, 0, 0, 0.25),
+    0 20px 40px rgba(0, 0, 0, 0.15);
+
+  padding: 12px 12%;
   transition: all 0.50s ease;
 }
 
@@ -65,8 +91,8 @@ header {
   font-weight: 500;
   padding: 5px 1px;
   margin: 0 8px;
-  text-align: center; /* Center the text within the anchor */
-  line-height: 1.4; /* Adjust line height for better vertical alignment */
+  text-align: center;
+  line-height: 1.4;
   transition: all 0.50s ease;
 }
 
@@ -107,7 +133,6 @@ header {
     top: 100%;
     right: -100%;
     width: 270px;
-    /* height: 35vh; */
     background: var(--main-color);
     display: flex;
     flex-direction: column;
@@ -132,4 +157,23 @@ header {
   .navbar.open{
     right: 2%;
   }
+
+  object{
+    width: 92%;
+    height: 720px;
+  }
+}
+
+/* Copyright directly under the PDF */
+.copyright,
+#copyright{
+  font-size: 0.95rem;
+  margin: 18px auto 30px;
+  width: 100%;
+  max-width: 800px;
+  text-align: center;
+  color: rgba(203, 213, 225, 0.9);
+  background: transparent;
+  padding: 0;
+  
 }

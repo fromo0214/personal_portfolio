@@ -36,39 +36,64 @@
           </header>
           <div class="content">
           <!-- Projects Section -->
-           <section class="projects">
-            <div class="project-item" onclick="openModal('modal1')">
-                <img src="images/fitflowpro_logo.png" alt="Project 1" class="project-img">
-                <div class="overlay">
-                    <div class="text">FitFlowPro</div>
+          <h1 class="projects-title">Projects</h1>
+
+          <section class="projects-section">
+            <h2 class="projects-section-title">Featured Projects</h2>
+          
+            <div class="featured-grid">
+              <article class="featured-card" onclick="openModal('modal1')">
+                <div class="featured-media">
+                  <img src="images/fitflowpro_logo.png" alt="FitFlowPro" class="featured-img">
                 </div>
+                <div class="featured-body">
+                  <h3>FitFlowPro</h3>
+                  <p>Full-stack fitness web app built with Spring Boot + Thymeleaf.</p>
+                  <div class="chip-row">
+                    <span class="chip">Spring Boot</span>
+                    <span class="chip">Thymeleaf</span>
+                    <span class="chip">Full-Stack</span>
+                  </div>
+                </div>
+              </article>
+          
+              <article class="featured-card" onclick="openModal('modal4')">
+                <div class="featured-media">
+                  <img src="images/DineScore.png" alt="DineScore" class="featured-img">
+                </div>
+                <div class="featured-body">
+                  <h3>DineScore</h3>
+                  <p>iOS full-stack app for rating food vs service separately (WIP).</p>
+                  <div class="chip-row">
+                    <span class="chip">SwiftUI</span>
+                    <span class="chip">Firebase</span>
+                    <span class="chip">iOS</span>
+                  </div>
+                </div>
+              </article>
             </div>
-            <div class="project-item" onclick="openModal('modal2')">
+          </section>
+          
+          <section class="projects-section">
+            <h2 class="projects-section-title">Other Projects</h2>
+          
+            <div class="projects-grid">
+              <div class="project-item" onclick="openModal('modal2')">
                 <img src="images/csudh_logo.png" alt="Project 2" class="project-img">
-                <div class="overlay">
-                    <div class="text">Student Enrollment System</div>
-                </div>
-            </div>
-            <div class="project-item" onclick="openModal('modal3')">
+                <div class="overlay"><div class="text">Student Enrollment System</div></div>
+              </div>
+          
+              <div class="project-item" onclick="openModal('modal3')">
                 <img src="images/autoshop_logo.png" alt="Project 3" class="project-img">
-                <div class="overlay">
-                    <div class="text">Auto Service Shop Database</div>
-                </div>
-            </div>
-            <div class="project-item" onclick="openModal('modal4')">
-                <img src="images/DineScore.png" alt="Project 4" class="project-img">
-                <div class="overlay">
-                    <div class="text">DineScore</div>
-                </div>
-            </div>
-            <div class="project-item" onclick="openModal('modal5')">
+                <div class="overlay"><div class="text">Auto Service Shop Database</div></div>
+              </div>
+          
+              <div class="project-item" onclick="openModal('modal5')">
                 <img src="images/memorize-game.png" alt="Project 5" class="project-img">
-                <div class="overlay">
-                    <div class="text">Memorize Card Game (Swift)</div>
-                </div>
+                <div class="overlay"><div class="text">Memorize Card Game (Swift)</div></div>
+              </div>
             </div>
-            
-           </section>
+          </section>
 
             <!-- Modal Structure -->
         <div id="modal1" class="modal">
@@ -129,7 +154,7 @@
         </div>
     
 
-        <p id="copyright">© 2024 by Fernando Romo</p>
+        <p id="copyright">© 2026 by Fernando Romo</p>
     </div>
 
 

@@ -1,28 +1,250 @@
-
-html {
-  background-color: grey; /* changes the background color of the page */
-  font-size: 20px;
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  text-decoration: none;
+  list-style: none;
 }
 
-.my-button{
-  display: inline-block;
-    padding: 10px 20px;
-    font-size: 16px;
-    font-family: Arial, Helvetica, sans-serif;
-    cursor: pointer;
-    text-align: center;
-    text-decoration: none;
-    outline: none;
-    color: #fff;
-    background-color: #0f3052;
-    border: none;
-    border-radius: 100px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+:root{
+  --bg-color:#222327;
+  --text-color:#fff;
+  --main-color: #2a4e73;
 }
 
 body {
-  margin: auto;
-  width: 640px; 
-  padding: 50px;
-  font-family: 'Lexend Deca', sans-serif;  
+  min-height: 100vh;
+  background: linear-gradient(180deg, #222327 0%, #1b1c20 100%);
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  margin: 0;
+  padding-top: 70px;
 }
+
+header {
+  background: rgba(34, 35, 39, 0.85); /* same as bg, slightly transparent */
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+    box-shadow:
+    0 8px 20px rgba(0, 0, 0, 0.25),
+    0 20px 40px rgba(0, 0, 0, 0.15);  position: fixed;
+  width: 100%;
+  top: 0;
+  right: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--bg-color);
+  padding: 12px 12%;
+  transition: all 0.50s ease;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  font-size: 28px;
+}
+
+.logo img {
+  width: 100px;
+  height: 100px;
+  margin-right: 10px;
+}
+
+.logo span {
+  color: var(--text-color);
+  font-size: 1.7rem;
+  font-weight: 600;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+}
+
+.navbar a {
+  color: var(--text-color);
+  font-size: 1.1rem;
+  font-weight: 500;
+  padding: 5px 1px;
+  margin: 0 8px;
+  text-align: center; /* Center the text within the anchor */
+  line-height: 1.4; /* Adjust line height for better vertical alignment */
+  transition: all 0.50s ease;
+}
+
+.navbar a:hover {
+  color: var(--main-color);
+}
+
+.navbar a:active,
+.navbar a.active{
+  color: var(--main-color);
+}
+
+@media(max-width: 1280px){
+  header{
+    padding: 14px 2%;
+    transition: .2s;
+  }
+  .navbar a{
+    padding: 5px 0;
+    margin: 0px 20;
+  }
+}
+
+#menu-icon{
+  font-size: 35px;
+  color: var(--text-color);
+  cursor: pointer;
+  z-index: 10001;
+  display: none;
+}
+
+@media (max-width: 1090px){
+  #menu-icon{
+    display: block;
+  }
+  .navbar{
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    width: 270px;
+    /* height: 35vh; */
+    background: var(--main-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    border-radius: 30px;
+    transition: all .50s ease;
+  }
+  .navbar a{
+    display: block;
+    margin: 12px;
+    padding: 0px 10px;
+    transition: all .50s ease;
+  }
+  .navbar a:hover{
+    color: var(--text-color);
+    transform: translateY(5px);
+  }
+  .navbar a.active{
+    color: var(--text-color);
+  }
+
+  .navbar.open{
+    right: 2%;
+  }
+}
+
+p{
+  line-height: 1.6;
+  color: var(--text-color);
+  max-width: 80ch;
+  text-align: center;
+  border-radius: 12px;
+  background-color: rgba(15, 48, 82, 0.35);
+  margin: 0 auto; 
+}
+
+.copyright,
+#copyright{
+  font-size: 0.95rem;
+  margin: 18px auto 30px;
+  width: 100%;
+  max-width: 800px;
+  text-align: center;
+  color: rgba(203, 213, 225, 0.9);
+  background: transparent;
+  padding: 0;
+  
+}
+
+.content { max-width: 1100px; margin: 0 auto; padding: 0 1.5rem 3rem; }
+  
+.page-title { 
+  padding: 50px 1.5rem 0px;
+  margin: 2.25rem 0 0.75rem; 
+  text-align: center; 
+  color: #fff; 
+  letter-spacing: -0.02em; 
+  font-size: 2.6rem; 
+}
+  
+.page-subtitle { 
+  text-align: center; 
+  color: var(--text-color); 
+  line-height: 1.7; 
+  margin-bottom: 1.5rem; 
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+  
+.ig-cta { display: flex; justify-content: center; margin: 0 0 2rem; }
+  
+.ig-button {
+    display: inline-block;
+    padding: 0.7rem 1.1rem;
+    border-radius: 999px;
+    border: 1px solid rgba(77,163,255,0.45);
+    color: #4da3ff;
+    background: rgba(15,48,82,0.25);
+    text-decoration: none;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  .ig-button:hover { transform: translateY(-2px); box-shadow: 0 18px 40px rgba(15,48,82,0.6); }
+
+  .ig-embeds {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    align-items: start;
+  }
+
+  /* Make the Instagram embeds fit nicely */
+  .instagram-media { width: 100% !important; min-width: 0 !important; margin: 0 !important; }
+
+  .ig-note {
+    margin: 1.25rem auto 0;
+    max-width: 75ch;
+    color: rgba(203,213,225,0.85);
+    text-align: center;
+    line-height: 1.6;
+  }
+
+  /* Prevent white flash on overscroll */
+  html { background: #222327; }
+  body { background-color: #222327; }
+
+
+
+  .content {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 1.5rem 3rem;
+  }
+
+  .ig-embeds {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    align-items: start;
+    justify-items: stretch;
+  }
+
+  /* Instagram injects inline max-width/margins; override so it can fit grid columns */
+  .instagram-media {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    margin: 0 !important;
+    overflow: hidden;
+    border-radius: 18px;
+  }
+
+  /* Prevent white flash on overscroll */
+  html { background: #222327; }
